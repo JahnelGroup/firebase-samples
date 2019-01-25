@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Todo List</title>
+
+    <script defer src="/__/firebase/5.8.0/firebase-app.js"></script>
+    <script defer src="/__/firebase/5.8.0/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/init.js"></script>
+
+    <link rel="stylesheet" href="todo.css">
+  </head>
+  <body>
+    <main id="message">
+      <h1>Next on my agenda</h1>
+      <section class="newTask">
+          <input placeholder="To-do" id="new-task">
+          <button id="add-btn">Add</button>
+      </section>
+      <section class="tasks">
+        <ul class="tasks-list">
+        </ul>
+      </section>
+    </main>
+    <p id="load">Firebase SDK Loading&hellip;</p>
+  
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        try {
+          let app = firebase.app();
+          document.getElementById('load').innerHTML = "";
+        } catch (e) {
+          console.error(e);
+          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+    
+    <script src="/todo.js" type="module"></script>
+  </body>
+</html>
