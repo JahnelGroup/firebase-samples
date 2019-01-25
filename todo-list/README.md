@@ -13,7 +13,7 @@ $ firebase login
 A browser will pop-up where you can authenticate with a Google account. 
 
 ### Create Firebase Database
-You'll need to create a Firebase project and associate it with in your console, start by navigating to https://console.firebase.google.com/. After creating the project, click the **Develop** then **Database**, then choose **Cloud Firestore**, and then select **Start in test mode**. 
+You'll need to create a Firebase project and associate it with in your console, start by navigating to https://console.firebase.google.com/. After creating the project, in the left side navigation bar click on **Develop**, then **Database**, then choose **Cloud Firestore**, and then select **Start in test mode**. 
 
 ### Associate it with in your console 
 Make sure that you're in this project repo's root directory. First list your projects, you should see the one that you created earlier.
@@ -41,3 +41,6 @@ You may then run it locally with
 
 Or deploy it with
 `$ firebase deploy`
+
+## View Database
+You can view the database by first going to https://console.firebase.google.com/ and then selecting your project. In the left side navigation bar click on **Database**, then you should see the data change as you use the application. 
